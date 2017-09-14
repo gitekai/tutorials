@@ -1,0 +1,608 @@
+1.1 Getting started 
+		GIT is a distributed system. 
+			Pros: 
+				The single point of failure gets eliminated. 
+
+
+	Snapshot not difference 
+	
+		--> GIT instead of saving "only" the differences of the file collection it saves every file there is in the project. 
+		(well, when there is an unchanged file it only creates a soft link to it). 
+
+	Nearly every operation is local
+	
+		--> GIT as being local will not take as long when doing an operation. 
+			-(Network speed does not influence (althought in nower days this should not be a problem at all!!!))
+			-Offline working is possible. Network actually is almost not needed. 
+
+	Git Integrity: 
+		--> GIT does not save files by its name. Instead it takes the SHA-1 Hash generated to refer to a file. (althought name changes are detected anyways)
+
+	Three states: 
+
+		commited: 
+			--> files have been placed in DB
+		modified: 
+			--> files differ from file-content inside DB
+		staged: 
+			--> files which are already modified but, have been marked to go exactly the way they are into the next commit. 
+
+	Three main sections (dirs): 
+		
+		Git-Dir:
+			This is where GIT stores its metadata for the project and it also contains the DB
+		Working-dir: 
+			This is a single checkout of a one version of the project. Git pulls out the files from the DB and leaves them in the 
+			working dir so that they can be modified. 
+
+		Staging-area: 
+			Is a File which (normally contained inside the git-dir ), which containes information about what will go into the next commit. 
+			Sometimes also refered to as "index"
+
+	Basic Workflow: 
+
+		1. files are modified. 
+		2. Files will be staged so that a snapshot is created inside the "staging area"
+		3. Files are commited, which will take the snapshot, as they are in the staging area and save that permanently to the DB. 
+
+
+
+1.6 GIT First time setup 
+
+	git config: 
+		--> this command will enable you to configure git. 
+
+		git Files: 
+			there are 3 config files in git
+	
+			1. /etc/gitconfig
+				--> this contains all the global options. 
+				command-line: 
+					git config --system 
+
+			2. ~/.gitconfig
+				--> these are the options for a specific user. 
+				command line: 
+					git config --global 
+
+			3. .git/config
+				--> this is the project specific configuration file. 
+				command-line: 
+					git config --local 
+
+			NOTE: When diving into a more specific config file (most specific being project specific), the configuration overwrites the 
+			higher levels. 
+
+
+			example (very usefull):
+				Setting the user.name and user.email properties, which are baked into every commit !!!!!.
+
+				git config --global user.name "Romeo.hesch"
+				git config --global user.email "romeo.hesch@gmail.com"
+				git config --global core.editor vim 
+				git config --globa  diff.tool vimdiff
+
+	--list 
+		--> lists the current (overwritten) configuration. The active one. 
+
+	git config VAR.NAME 
+		--> will print out the value of this var
+
+
+1.7 Gettign help 
+
+	$ git help <verb>
+	$ git <verb> --help
+	$ man git-<verb>  
+
+
+
+
+2.1 GIT BASICS
+
+	there are 2 states of every file: 
+
+		1. Tracked: 
+			--> a File which has been in the last snapshot. 
+			those can be: 
+				-unmodified
+				-modified
+				-staged
+	
+		2. Untracked: 
+			--> Everything else. 
+			
+	
+	Tracking files:
+	--> git add 
+
+		to make a file known to git use: 
+			git add <DIR/FILE>
+
+			FILE: 	
+				--> when used against a file it will be added to git and also shows up in the staged area. 
+
+			DIR: 
+				--> this will add the directory and every file in it recursivly to git and in staged also. 
+
+
+	Changing already tracked Files: 
+	--> git add
+
+		This will make the file appear in the "unstaged" section of the command `git status`: 
+		to stage that file execute:
+			git add <FILE>
+
+		TIP: Think of git add as "add it to staging" instead of add it to the project. 
+
+
+
+	Checking the status: 
+	--> git status 
+	
+	Checking the status shortly: 
+	--> git status --short (-s)
+
+
+
+	.gitignore: 
+
+		BASIC RULES: 
+
+		-Blank lines or lines starting with # are ignored.
+		-Standard glob patterns work ( list = " * [abc] ? [0-9]   "  ).
+		-You can start patterns with a forward slash (/) to avoid recursivity.
+		-You can end patterns with a forward slash (/) to specify a directory.
+		-You can negate a pattern by starting it with an exclamation point (!).
+
+
+	git diff
+		--> lists the unstaged changes of a file in comparission what has been comitted. 
+
+	git diff --staged|--cached 
+		--> lists the staged changes of a file in comparison to what has been committed. 
+
+	git commit 
+		--> will commit all staged files 
+
+	git commit -a 
+		--> will commit all modified files (staged and modified unstaged Files)
+
+	git commit -m "comment"
+		--> will add automatically the comment to the commit without opening before the editor of your choice with the differences 
+
+	git commit -v 
+		--> will not only resume the changes but also show you the differences between files in the chosen editor. 
+
+
+
+
+	Removing Files: 
+
+		To remove a file you need to: 
+			--> untrack the file and commit the file. 
+
+		git rm
+			--> When a file is tracked and commited it will "stage" this removal and also delete it from your working dir. 
+			As this file was already commited it can be brought up again. 
+
+			When there is a staged file -f (force) must be used because this is the only action that really can mess up things. 
+
+		git rm --cached			
+			This one removes a staged File without removing it from the current working dir. 
+			This is very usefull when accidently staging a file which should be actually in the .gitignore File. !!!!!!!!
+
+		NOTE:
+			git rm accepts wildcards (the asterisk must be escaped because git does its own shell expasion ... \* )
+
+
+	Renaming Files: 
+
+		To rename a file (as git actually only knows the hash) you can do following: 
+
+		$ mv README.md README
+		$ git rm README.md
+		$ git add README
+
+			--> this will detect the file-renaming and this can be commited. 
+
+		Shorthand for that is: 
+
+		git mv README.md README
+			AWESOME SHORTCUT !!!!!
+		
+
+
+	
+		
+
+
+2.3 GIT HISTORY 
+
+	git log 
+		--> will get all the commit comments history with author and checksum: 
+			example: 
+				commit 05a36821f378b3d265424ccc338e655e9be891e9
+				Author: romeo.hesch <romeo.hesch@gmail.com>
+				Date:   Thu Sep 14 09:23:26 2017 +0200
+				
+				    this time the second line will also be added
+		parameter: 
+
+			Style Modifications:
+
+			-p
+				--> will show the diffenrence between lines in the commits (patch)
+
+
+			--stat
+				--> will add a littly summary of the files changed,count of lines deleted and added
+				and later on the textual representation of the same 
+
+				example (only additional part):
+				 2.txt | 6 ++++--
+				 1 file changed, 4 insertions(+), 2 deletions(-)
+
+			--shortstat
+				--> similar to --stat but will leave out the file listing with the respective file change sumary and only 
+				outputs the total: 
+				
+				example: 
+				 2 files changed, 3 insertions(+)
+
+			--name-status 
+				--> shows only the information changing files and its status like 'modified,added,deleted ...'
+					example: 
+					A       test.file
+					A       test.text
+					D       test.txt
+
+			--name-only
+				--> similar to name-status but does only show the file name not its corresponding status
+
+			--abbrev-commit 
+				--> shortens the commit hash
+
+			--relative-date
+				--> displays instead of a date an expression like '2 hours ago' etc ...
+
+			--graph
+				--> displays an ascii art graph representing the merge history 
+
+
+			--pretty=FORMAT
+
+				Predefined formats: 
+
+					oneline 
+					short 
+					full 
+					fuller
+
+				Personalized: 
+					example: 
+						format:"%h_%s" 
+							--> this will show the hash and subject
+  
+
+		
+			Filter Modifications: 
+			
+			-'N'
+				--> where 'N' is a number will only print out the las 'N' commits (entries)
+
+
+			--since, --after
+			
+				Limit the commits to those made after the specified date.
+			
+			--until, --before
+			
+				Limit the commits to those made before the specified date.
+			
+			--author
+			
+				Only show commits in which the author entry matches the specified string.
+			
+			--committer
+			
+				Only show commits in which the committer entry matches the specified string.
+			
+			--grep
+			
+				Only show commits with a commit message containing the string
+			
+			-S
+				
+				Only show commits adding or removing code matching the string
+
+			
+
+			Specifying only a specific path or file: 
+
+				git log -- <FILE> or 
+				git log -- <DIR>/
+			
+
+2.4 Undoing things. 
+
+
+	Commit: 
+		When you forget to add a file in one commit, or you simply want to modify the commit message than you can run: 
+			git commit --amend 
+				--> this takes the staging area as it is and overwrites the last commit. 
+				In the editor the last comment will also show up. 
+
+		
+
+	Staged Files: 
+
+		Actually the 'git status' command also reminds you of how its done: 
+			git reset HEAD file
+
+
+	Modified File in working directory: 
+		This is also told by 'git status': 
+			git checkout -- <file>
+			NOTE: THIS IS EXREAMLY DANGEROUS AS THIS IS ONE OF THE FEW THINGS THAT CAN MAKE YOUR FILE CHANGES UNREVERSABLE !!!!!!!
+
+	
+
+
+2.5 Working with remotes: 
+
+
+	showing Repos: 
+
+		git remote
+			--> will list all short-names for the configured remotes. 
+				When the repo is a cloned one at least 'origin' should show up. 
+	
+				example: 
+				[ekai@romeo-klaus ERP_REST_SKELETON]$ git remote
+				origin
+				[ekai@romeo-klaus ERP_REST_SKELETON]$
+	
+		params:
+	
+			-v 
+			--> Will show the URL of the remote 
+			example: 
+				[ekai@romeo-klaus ERP_REST_SKELETON]$ git remote -v
+				origin	https://github.com/gitekai/project.git (fetch)
+				origin	https://github.com/gitekai/project.git (push)
+				[ekai@romeo-klaus ERP_REST_SKELETON]$ 
+	
+	
+	adding repos: 
+	
+		git remote add <shortName> <URL>
+
+		example: 
+			[ekai@romeo-klaus git]$ git remote add ekai_tutorial https://github.com/gitekai/remotes_tut.git
+			[ekai@romeo-klaus git]$ git remote add anotherPerson_tutorial https://github.com/gitekai/remotes_tut.git
+			[ekai@romeo-klaus git]$ git remote -v 
+			anotherPerson_tutorial	https://github.com/gitekai/remotes_tut.git (fetch)
+			anotherPerson_tutorial	https://github.com/gitekai/remotes_tut.git (push)
+			ekai_tutorial	https://github.com/gitekai/remotes_tut.git (fetch)
+			ekai_tutorial	https://github.com/gitekai/remotes_tut.git (push)
+			[ekai@romeo-klaus git]$  
+	
+	Fetching information from repos: 
+
+		git fetch <shortname|URL>
+			This will download all the branches from the remote repo and make them accesible to your project. 
+			NOTE: This will NOT merge any changes, you must do this manually. 
+
+	
+		git pull <shortname|URL>
+			When a repo is already tracked this command can be used to download the external repo files and merge them 
+			automatically into your current branch. 
+
+		git clone <shortname|URL>
+			Will download all the files of a repo and automatically track that repo as 'origin'. So once this is done 
+			you can run git pull (without any params) and it will try to merge the repo into your current branch. 
+
+
+	Pushing information to repos: 
+
+		git push [remote-name] [local-branch-name]
+			This will push the files on the branch you specify to the specified remote. 
+
+
+
+
+	inspect a remote 
+
+		git remote show [remote-name]
+			--> Shows you:
+				-the active branch (Head)
+				-the remote url 
+				-the remote branches 
+				-the local branches and in which remote branch it comes when pushing and pulling
+	
+			example: 
+			[ekai@romeo-klaus git]$ git remote show ekai_tutorial 
+			* remote ekai_tutorial
+			  Fetch URL: https://github.com/gitekai/remotes_tut.git
+			  Push  URL: https://github.com/gitekai/remotes_tut.git
+			  HEAD branch: master
+			  Remote branches:
+			    dev    tracked
+			    master tracked
+			  Local refs configured for 'git push':
+			    dev    pushes to dev    (local out of date)
+			    master pushes to master (up to date)
+			[ekai@romeo-klaus git]$  
+
+
+	Removing and Renaming Remotes
+		git remote rename <remote short-name> <new short-name>
+		git remote remove <remote short-name>
+
+
+
+
+2.6 Tagging 
+
+	Listing tags: 
+
+		git tag 
+			--> will list all the projects tags available. 
+
+		git tag -l "v1.8"
+			--> will list only the projects tags containing 'v1.8'
+
+		
+	creating tags:
+
+		two tag types:
+
+			-lightweight:
+				Those are 'just' pointers to a commit 
+			-annotated: 
+				Those are a pure db object for git. It contains the date, the tagger, the email, the checksum 
+				example: 
+
+			NOTE: Its always recommended to do the annotated ones. The lightweight ones are just for temporary reasons. 
+
+
+
+
+		creation of tags 
+			lightweight: 
+				git tag 'lw_tag'
+					--> this tags the last commit
+
+			annotated: 
+				git tag -a 'ann_tag'
+					--> this tags the last commit with an entire object 
+
+
+			Tagging an older commit: 
+
+				just specify as last param the hash of the commit you want to tag: 
+
+					git tag -a 'some_tag' dd60a5f
+			
+
+
+
+			Show Tag information
+
+				git show
+
+			Show only specific tags: 
+				git show -l "tag_containing_that"
+
+
+
+					
+
+		
+
+
+	Sharing Tags to remote server:
+
+			When pushing to a remote server the tags won't get pushed. This has to be done manually. 
+
+				git push <remote-name> <tag-name>
+
+			To push all the tags available on local to remote do: 
+				git push <remote-name> <tag-name> --tag
+
+	
+	checkout TAGS: 
+
+			You can get the version of a file a tag is pointing to executing: 
+
+				git checkout 'tagname'
+
+					NOTE: This detaches your head. which means that when making any change to that file and commiting 
+					it will be UNREACHABLE (althought you can reach it by its hash name only )!!! 
+					Once a file was checked out this way and you are in HEADLESS to avoid the unreachable scenario you must checkout in a new branch. 
+					This now makes the file accasible again. BUT WATCH OUT !!! The tag now points to a different version as it was before !!!!
+
+				
+
+
+
+2.7 GIT ALIASES 
+
+	Creation of alias: 
+
+
+		$ git config --global alias.co checkout
+		$ git config --global alias.br branch
+		$ git config --global alias.ci commit
+		$ git config --global alias.st status
+		$ git config --global alias.unstage 'reset HEAD --'
+		$ git config --global alias.last 'log -1 HEAD'
+		
+
+
+
+
+
+
+3.1 Branching in a nutshell 
+
+	
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

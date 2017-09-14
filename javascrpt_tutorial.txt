@@ -1,0 +1,1631 @@
+# https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction
+
+
+Declaration of variables: 
+
+	3 types can be used: 
+
+	var: 	
+		--> declares variables which optionally can be initiated. 
+		
+
+	let: 
+		--> block scoped variables which optionally can be initiated.  
+
+	const:
+		--> declares and initiates read-only variables. Also block scoped.
+		Note: 
+			When using this for declaring an object its properties are not read-only !!!!
+			const MY_OBJECT = {'key': 'value'};
+			MY_OBJECT.key = 'otherValue';		
+				--> this is actually possible 
+
+
+	types of declaring variables: 
+
+		- simply assing it a value. (NOT RECOMMENDED !!!! ). 
+			note: when used outside of a function this will be a global variable. 
+	
+		- with the keywords mentioned before. 
+
+	Evaluation of newly declared variables:
+
+		When a variable is declared without any value it will be 'undefined'
+
+		Treatment of undefined values: 
+
+			Boolean Context => false, 
+			Numeric		=> NaN, 
+			
+
+		Treatment of null values: 
+
+			Boolean Context => false,
+			Numeric		=> 0, 
+
+
+	Hoisting 
+		This means that a variable definition will be brought up to the top of a block. Althought this is done when referencing this variable before the actual 
+		utilization it will end up in a 'referenceError'. So alwayhs asign it as close as possible before needed. 
+
+		Functions: 
+			only the function declaration will be hoisted not the expression itself. Therfore this wil fail: 
+			baz();var baz=function(){console.log("test");};  --> not ok 
+			var baz=function(){console.log("test");}; baz(); --> OK 
+
+
+
+	Global variables. 
+
+		Global variables are properties of the global object. Therefore there are exposed in window.PROPERTY
+
+
+
+
+
+	DATA Types: 
+
+		Primitive Data Types: 
+
+			- Number 
+			- String 
+			- Boolean 
+			- undefined 
+			- null 
+			- Symbol (properties to objects wich should are like declaring it private and so not exposing it to the outside ) 
+				
+		Non Primitive Data type: 
+			-Object
+
+
+
+	Type conversion: 
+
+		Strings and Numbers: 
+			When used with the '+' operator. A Number will be converted to a string. 
+			All other operators are not behaving this way. 
+
+			1 + '42' => 142
+			'42' + 1 => 421
+			'42' - 1 => 41
+
+			Note: 
+			If a string is needed to be parsed to a number you can use: 
+			''.parseInt(,10);
+			''.parseFloat(,10);
+				--> this should be always used with the radix parameter indicating the numbers base. 
+
+
+
+	Literals: 
+
+		Array Literals: 
+			[ 'one','two','three'];	
+			Note: 
+				In top level of a script: 
+					JavaScript interprets the array each time it evaluates the expression containing the array literal. 
+				In function: 
+					The Array literals when inside a function will be created each time the function is accessed. 
+
+			Extra commas: 
+
+				If there are various commas found in an array literal an undefined value will be created in the corresponding position. 
+				The one comas in the end of a array literal will be ignored. [ 'one','two','three',];
+
+		Boolean literal 
+			
+			there is 'true' and 'false', not to be mixed up with the 'true' and 'false' of the Boolean Object. 
+
+		Integer literal: 
+
+			Those can be expressed in various ways: 
+
+				Decimal: 
+					expressed as the value as it is without leading '0'
+
+				Octal: 
+					expressed with 0 at the beginning or 0O or 0o
+				hexadecimal 
+					expressed with Ox or OX at the beginning 
+					
+
+				binary 
+					express with 0b 0B. 
+
+
+		Floating literal: 
+
+			(+|-)][digits][.digits][(E|e)[(+|-)]digits]
+
+
+
+
+		Object literals: 
+
+			Never use them at the beginning of a statement. As it will be considered the beginning of a block. 
+			Object properties can be any kind of valid string, even an empty string. 
+			Properties which are not a valid string can be declared with cuotes '' and can later be accessed through the array like notation. 
+			Object['Non valid string'].
+			In ES2015, object literals are extended to support setting the prototype at construction, 
+			shorthand for foo: foo assignments, defining methods, making super calls, and computing property names with expressions.
+
+		Regex literals: 
+			Just a string enclosed between '/'
+
+		String literals: 
+			String literals are zero or more chars enclosed between " or '. Any of the methods for the String Object are also available on a string literal. 
+			JS converts the string literal to a temporary string object, applies its methods and descards finally the temporary object. 
+
+			String interpolations: 
+				To archive a string interpolation there is a similar sintaxis to it as in PERL. Just do following: 
+				var name='TOM'; 
+				`Hello ${name},how are you today? `
+
+
+
+
+
+Control flow and error handling: 
+
+	Block Statements: 
+
+		before Ecmascript 2015 there was no block scope for variables. 
+		Which is why variables defined in a block actually have a scope for the whole function or even script. 
+		Example: 
+	
+		var x = 1;
+		{
+			var x = 2;
+		}
+		console.log(x); // outputs 2
+	
+	
+		
+	If Statements and its falsy values: 
+	
+		following values will end up in a falsy value: 
+	
+		false
+		undefined
+		null
+		0
+		NaN
+		the empty string ("")
+	
+
+	Exception Handling: 
+	
+		Throw: 
+			Every var type can be thrown as a exception even objects. 
+
+		try: 
+			is where a possible faulty block is executed 
+	
+		catch(e): 
+			accepts an catchID which contains the values provided by the thrown.
+			this object when created by system will always have the properties: 
+				-name
+				-message
+				When throwing user created errors this can be archieved for example by creating the error with the Error constructor: 
+				new Error("Bad exception thrown");
+			
+			will catch the error in case some exception is thrown. 
+			
+
+		finally: 
+			will always get there does not matter whether an exception was thrown or not. 
+			Once there all the returns done by other blocks will be overwritten. 
+			A catch statement which returns true for example will be retained untill reaching the finally statement 
+			and then overwritten by the finally statement if this also has a return statement. 
+			
+			
+		
+
+
+Loops and iteration: 
+
+	for loop: 
+		known
+	do while:
+		known
+	while:
+		known
+
+	for .. in:
+		Iterates through all the object properties
+
+		NOTE: 
+			Should not be used for arrays as its user defined properties also would show up: 
+			arr.newProp="test";
+			
+			for (var i in arr){ console.log("this is i = " + i ); }
+			VM501:1 this is i = 0
+			VM501:1 this is i = newProp 
+	for .. of: 
+		Iterates through iterable objects using a custom iteration hook with the statements to be executed for each value: 
+		for (var i of arr){ console.log("this is i = " + i ); }
+		VM510:1 this is i = one
+		(note the missing 'test' from newProp property). 
+
+
+Functions: 
+	
+	Declaration and arguments: 
+
+		when passing primitive variables to functions 
+		it can be manipulated inside a function without changing its value outside of it. 
+		NOTE: Objects will be changed outside a function when properties are changed inside of it. 
+
+	Function expressions:
+
+		function expressions are functions assigned to a variable. This are normally anonimous. 
+		When needed it can be declared with a name so it can be used inside itself or when debugging to see its call trace. 
+		This type of declaration will not be hoisted. 
+
+	Function Scope:
+	
+		A function has access to all the variables of the scope it was defined in. 
+		When a function was created in global scope it will have access to all global scope available vars. 
+
+
+	Nested function and closures: 
+	
+		In programming languages, closures (also lexical closures or function closures) are techniques for implementing lexically scoped name binding in languages with first-class functions. 		
+		Operationally, a closure is a record storing a function[a] together with an environment:[1] a mapping associating each free variable of the function (variables that are used locally, 
+		but defined in an enclosing scope) with the value or reference to which the name was bound when the closure was created.[b] 
+		A closure—unlike a plain function—allows the function to access those captured variables through the closure's copies of their values or references, 
+		even when the function is invoked outside their scope.
+	
+		On nested functions the inner function in case of name conflicts will have precedence because of the scope chain. 
+
+		Thanks to closures we can emulate private functions also known as the module pattern: 
+			EXAMPLE:
+
+			counter = (function(){
+				var private_counter = 0; 
+				function changeby( val ){
+					return private_counter += val ; 
+				}
+				
+				return {
+					increment: ()=>changeby(+1),
+					decrease:  ()=>changeby(-1),
+					value:	()=>changeby(0),
+				}
+			})();
+		
+
+	Using arguments object: 
+
+		All parameters passed to a function will be stored inside a array-like structure named arguments. 
+		This can be accessed with arguments[index] and its length is also equal to arrays and can be accessed by .length parameter. 
+
+
+	Function parameters: 
+		
+		New to ECMASCRIPT 2015 there are 2 new parameter to functions: 
+		-Default parameters
+		-Rest parameters
+
+		Default Parameters: 
+	
+	 		Normally parameters of a function default to undefined. But when doing a multiplication for example it can be usefull to have controll over this behaviour. 
+			So it can be defined like following: 
+
+				function multiply(a=1,b=1){
+					return a*b; 
+				}
+
+		Rest Parameters: 
+			The rest parameters allows us to define an undefined number of parameter used as array. 
+			To define it use following: 
+				function multiplyThirdToRest(a,b,...rest){ //rest here is an array .... };
+
+		Closures: 
+			When a function has a inner function and uses a variable of the outer scope and the execution of the outerscope ends 
+			The garbage collector will not remove the variable used in the inner function so that it is still available to it when it want to use it. 
+			This variable reference is created once the outer function ends. And therefore funny things can happen like inside a loop a function will only assign the 
+			last updated value as the counter is shared in execution. 
+
+			The Module Pattern: 
+
+			This pattern can be generated thanks to closures. With this private methods can be achieved. 
+
+		IIFE (Immediately invoked Function Expression ): 
+			when a function or function expression is created it can be executed putting parentesis (after creation) behind the function name or 
+			behind the variable containing the function expression. 
+			
+			If this is want to be done on creation the js parser when seing the 'function' expression will always think that this is function definition. 
+			To let the parser know that we want to archieve an expression interpretation we just wrap around some parens '()'. This way the parser will know that now 
+			an expression will follow. Now just put more parens after the function definition to immediately execute it. 
+			We will get following syntax: 
+				( function(){ /* code here */}()); 
+				NOTE:
+					The sourounding parens (indication a NOT definition of a function ) are only needed when the parser expects them. 
+					It is recommended though to use them always as it makes it more readable !!!!
+
+
+			ADVANTAGE: 
+
+			One of the most advantageous side effects of Immediately-Invoked Function Expressions is that, 
+			because this unnamed, or anonymous, function expression is invoked immediately, without using an identifier, 
+			a closure can be used without polluting the current scope.
+			
+
+
+
+		Arrow Functions: 
+		
+			This feature was created because of 2 main resons: 
+
+			1. Shorter functions 
+			2. Lexical This 
+
+			Shorter Functions: 
+				returning functions with only one param can be wrote like this: 
+				param => test ; 
+				returning functions without any parameters: 
+				() => test; 
+				returning functions with multiple params: 
+				var funct = (param1,param2,param3=555) => alert("test param1 = " + param1 + "param2 = " + param2 + "param3 =" + param3);
+				functions without return should contain a block statement: 
+				param => { test;  }; 
+				when using it with a block statement and a return is expected it MUST be put !!!!
+
+				NOTE: 
+					The arrow function will not create its own this. It uses the one created in the outer scope. AWESOME !!!!
+
+			
+	
+	
+
+			Function Object: 
+			https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
+
+	
+	
+		Operators: 
+
+			binary operand: 
+				--> operand1 operator operand2 ( x+z )
+
+			unary operand: 
+				--> operator operand (++x ) or
+				operand operator ( x++) 
+
+			assignments (interesting ones):
+				x **= y (Exponention assignment)
+				
+			Destructing assignment: 
+				--> imitating an array literal construction we can extract data from objects or array: 
+				[availability,power,time] = obs_array, 
+
+			Arithmetic Operators: 
+				++x/--x 
+					--> will increment/decrease first the var and then asign it so: 
+					 var x=5; var t = ++x; //(t == 6)
+
+				x++/x--
+					--> will first assign and then increment/decrease: 
+					var x=5; var t = x++; //t == 5)
+
+				+
+					--> will try to convert the value of var to a number: 
+					if( +'3' + 5 === 9 ) alert("correctly done!"); //works
+					if( '3' + 5 === 9 ) alert("correctly done!"); // does not work
+					console.log(+true); // 1 
+				- 
+					--> will return the negation of its operand
+
+
+
+			Bitwise operators: 
+	 			will treat the operand as a 32bit number in binary but return a standart js number: 
+				Example: 			
+					17 & 25 = 10001 & 11001 = 10001 = 17
+
+			String operators: 
+				+
+				--> will join strings 
+				Example: 
+					'this are just ' + 6 +  'tests'
+						--> 'this are just 6 tests'
+
+			ternary operator: 
+
+				(condition) ? 'if true value' : 'else value'
+
+			comma operator: 
+				Evaluates all operands and returns only the last operand. Used normally in for loops: 
+				for (var x=1, z=2,i = 0, j = 9; i <= j; i++,x++,z++, j--) console.log("x = " + x + " ;z = " + z + " ;i =" + i +" ;j = " + j );
+					VM1151:1 x = 1 ;z = 2 ;i =0 ;j = 9
+					VM1151:1 x = 2 ;z = 3 ;i =1 ;j = 8
+					VM1151:1 x = 3 ;z = 4 ;i =2 ;j = 7
+					VM1151:1 x = 4 ;z = 5 ;i =3 ;j = 6
+					VM1151:1 x = 5 ;z = 6 ;i =4 ;j = 5
+
+			unary operators: 
+				unary operatos only have one operand: 
+
+				delete 
+					--> will delete 
+						an object = delete Object 
+						an objects property  = delete Object.property
+						an objects property  = delete property // only possible with 'with' TODO Find out what this means. 
+						an array element (replaces the index with undefined doesn't shift) = Object.arr[index]
+						a var
+
+					Note: 
+						When deleting this will set the property or element or var to 'undefined' and then returns true when succeded and false if not. 
+						This can only delete variables when implicitly defined. If used var to define a var it will not be possible. 
+						When deleting an array item this one will be adressable but will return undefined. The array element will not exist though. 
+						To get the same result but with an existing array assign 'undefined'. 
+
+					Example of array deletion: 
+						var arr=['eins','zwei','drei','vier','funf']; 
+						delete arr[2]; 
+						
+							VM Array[5]
+							VM 0:"eins"
+							VM 1:"zwei"
+							VM 3:"vier"
+							VM 4:"funf"
+							VM length:5
+
+						var arr=['eins','zwei','drei','vier','funf'];
+                                                arr[2]=undefined;
+
+                                                        VM Array[5]
+                                                        VM 0:"eins"
+                                                        VM 1:"zwei"
+                                                        VM 2:undefined
+                                                        VM 3:"vier"
+                                                        VM 4:"funf"
+                                                        VM length:5
+
+
+			
+				type of: 
+					will return as a string the type of the operand. 
+
+
+				void: 
+					The void operator specifies an expression to be evaluated without returning a value.
+
+
+			Relational Operators: 
+				
+
+				in
+					This will indicate if an Object has certain property on not. 
+
+				instanceof
+					Will return true when the specified Object is of the specified object type. 
+					like 'Array' and 'Date'. 
+
+
+			Expression categories: 
+				Arithmetic (evaluates)
+				String (evaluates)
+				Logical (evaluates)
+				Left-hand sided expressions (left values are destination of assignation)
+				Primary expressions (key words and basic expressions used in js)
+
+
+				Primary expressions: 
+
+					this:
+						referes to the current object. (hopefully the calling object in a function)
+					group operator 
+						--> Example: '(a+b)*c'
+
+					Comprehensions (Experimental):
+						There are two types: 
+ 
+				 
+						Array Comprehensions: 
+							Assembles new arrays based of other ones. 
+							Example:
+							var years = [1954, 1974, 1990, 2006, 2010, 2014];
+							[for (year of years) if (year > 2000) year];
+			
+						Generator Comprehensions: 
+							Will create a generator function out of an iterable object. 
+
+
+				Left-hand sided expressions: 
+
+					new: 
+						--> will create a user-defined object type incance or one that is already built-in. 
+
+					super
+						--> will call an objects parent function
+
+					spread
+						--> allows an expression to be expanded in places where multiple arguments are expected (inside a function) 
+						or multiple elements (inside an array literal)
+
+						ARRAYS:
+							var mid_body_parts=['shoulder','body','legs']
+							var full_body=['head',...mid_body_parts,'legs'];
+							full_body
+							["head", "shoulder", "body", "legs", "legs"]
+
+						FUNCTIONS:
+							function f(x, y, z) { }
+							var args = [0, 1, 2];
+							f(...args);
+
+
+
+Numbers: 
+
+	All numbers in js are imprlemented as double precision 64-bit binary format IIEE 754 (https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
+	There is no specific type for Integers. 
+	To be able to represent floating points the number-type has three symbolic values: 
+		-Infinity
+		+Infinity
+		NaN
+
+
+	Decimal-numbers:
+		All numbers starting with 0 followed by a number >= 8 or with one
+
+	Binary-numbers:
+		All numbers starting with '0b' or '0B' followed by a 1 or 0. 
+		Syntax error is thrown when the number found is different than this range. 
+
+	Octal-numbers: 
+	 	All numbers starting with an 0 followed by a number <=7. 
+		In strict mode this will throw an error. 
+		Implementing it with '0o' or '0O' is the correct way; 
+
+	hexadecimal-numbers
+		Prefixed with '0x' or '0X'
+
+	Exponential-numbers: 
+		0.10e1 = 1 
+		0.10E2 = 10
+		
+
+
+	Number Object: 
+
+		Properties for numerical constants: 
+		
+			Number.MAX_VALUE; 
+			Number.MIN_VALUE;
+			Number.POSITIVE_INFINITY;
+			Number.NEGATIVE_INFINITY;
+			Number.NaN
+			Number.MIN_SAFE_INTEGER;
+			Number.MAX_SAFE_INTEGER;
+
+			Note: Always refere to this values using the generic 'Number' object not one created yourself. 
+
+
+		Methods: 
+			Number.parseFloat(); (same as the global parseFloat)
+				--> parses a string to a floating number. 
+				Leading and Tailing whitespaces are ignored. 
+				When the first number char found cannot be interpreted as a number 'NaN' will be returned.
+				When a number starts correctly and afterwards has not interpretable chars those will be ignored. 
+
+			Number.parseInt(); (same as the global parseInt)
+				params: 
+					string representing the number to be transformed.  
+					radix
+						--> number which identifies the numerical base. ALWAYS DEFINE THIS PARAM !!!!! 	
+						(basically because of ecmascirpt 5 interpretation of octals vs more legacy ones )
+
+				Leading and Tailing whitespaces are ignored. 
+				First char not interpretable = 'NaN'
+				When a number not interpretable is found (even because of radix) the following chars are all ignored(No errors are thrown). 				
+				Can also be used to truncate numbers together without summing them up. 
+
+				Examples returning 15: 
+
+				parseInt('15 * 4',10);
+				parseInt('15.99',10);
+				parseInt('15e2',10); 
+				
+				Note: 
+					No calculations are done at all 
+
+			
+			Number.isFinite() 
+				This functions expects a number not like isFinite (the global one, which would convert to a number first)
+				Returns a boolean once tested whether a number isFinite or not. 
+				A number is finite when it not exceeds the 64-bit asignation available in js. 
+
+				Example: 
+
+					Number.MAX_VALUE*2
+					Infinity
+
+
+			Number.isInteger (has no global )
+				This function returns true when a integer and only a valid integer is detected. 
+				No 'NaN' no '+Infinity' no nothn bra. 
+
+			Number.isNaN
+				more robust than global isNaN. Tests whether a Numerical NaN is passed.
+				This will not accept other things than a number, not like the global function. That is why this is 
+				preferable. 
+				Very usefull when Number.isNaN returns false a arithmetical expression will always work. 
+				(Although the expression later on can return a NaN because of the operation done to the two valid values ... )
+				
+
+				Examples:
+					Number.isNaN('NaN');  /false
+					isNaN('NaN'); /true
+					Number.isNaN('0/0'); /false
+					isNaN('0/0'); /true
+
+					The reason to use Number.isNaN is following !!!: 
+
+					isNaN("blablabla");
+						true
+					Number.isNaN("blablabla");
+						false
+				 
+
+			Number.isSafeInteger
+				(Number.MAX_SAFE_INTEGER === 2**53-1 )
+				When getting to big integers there is a moment where numbers get rounded to the nearest because there are not anymore representable 
+				IN IEEE754 and must be rounded with 'round-to-nearest' and 'round-to-zero' rounding. 
+
+				2**53-1
+					9007199254740991
+				2**53
+					9007199254740992
+				2**53+1
+					9007199254740992
+
+					--> As you can see even though a number as big as 2**53 can be perfectly represented using IEEE754 there are other numbers rounding to the same value. 
+					That is why 2**53 is not anymore a safe integer. 
+
+
+
+
+			Number prototype functions: 
+				(This functions should be used with a self created number ojbect. )
+		
+				
+				Number.prototype.toExponentional();
+					params:
+						[fractionDigits]
+							--> 0 - 20 inclusive are allowed values
+				
+					will return a string represent the numberobject as a exponentional notation. 
+		
+				Number.prototype.toPrecision(); Number.prototype.toFixed();
+					Will take the number object and (round it || append zeroes) if necesary to get to the needed precision (fraction digits). 
+					The difference between both is, that toExponentional will return also exponentional notation,
+					 which is not included in toFixed()
+
+
+
+	Math object: 
+		Constant: 
+			Math.PI
+				--> Pi value
+
+
+		Methods (summary):
+
+			abs()
+				returns the absolute value (converts negative to positive ). 
+				Note: 
+					using null,empty string,empty array  -> returns 0 
+					using other strange thins: NaN
+
+			floor()
+				rounds the number always down 
+		
+			ceil()
+				rounds the number always up 
+
+			trunc()
+				cuts off the fractions digits
+
+			round()
+				rounds up when 0.5 
+
+			min()/max()
+				arguments: 
+					a list of csv
+
+				returns the minimum/maximum found if all passed values are Numbers. 
+				returns NaN if only one of the passed values is NaN
+				returns Infinity/-Infinity if no arguments were passed
+
+			random()
+				returns a number between 0 and 1 inclusive 
+
+			
+			sign()
+				returns the 'sign' of a given number which can have following values:
+				-1,+1,-0,0,+0
+				will return NaN when nothing of this signs was found in the argument. 
+
+
+	Date object: 
+
+		creation: 
+
+			no Params: 
+				will return the current date. 
+
+			string: 
+				must have following form: "Month,Day,Year hours:minutes:seconds "
+				new Date('April,01,2017 00:00:00' );
+					--> Hour,minute,second can be ommited, 
+			integer:
+				descripted as Year,month,day: new Date(2017,04,01) (April fools)
+				descripted as year,month,day,hour,minutes,seconds   new Date (2017,04,01,0,0,0)
+
+
+			 Methods: 
+				There are 4 method types: 
+
+					get: 
+						will get the date value out of the date object
+
+					set: 
+						will set the date object with the passed param
+
+					to: 
+						will return a string value out of date object. 
+
+					parse and UTC methods:
+						will parse date Strings
+
+
+Strings: 
+
+	Set of elements consisting in 16-bit unsigned integer which will contactenaded in a inmutable array. 
+
+	String literals: 
+
+		String literals can be created either with " or '. 
+		var s="hello" or var s='hello'
+
+		escaping: 
+
+			Hexadecimal: 
+				To create a string with a hexadecimal in in just use the prefix '\x'. 
+				This will be represented as a copyright  "©"
+
+			Unicode chars. 
+				Those need at least 4 chars and are escaped with '\u' 
+				
+				Example: 
+					'\u00c6'+'nima'
+					"Ænima"
+			Unicode point escapes:
+
+				Do it like that: '\u{2F804}'
+
+	String Object: 
+
+		creation: 
+			var string = new String('This is a string');
+				--> all methods are also available on a literal string as it is converted to a temporary string object. 
+				The method will be called on this and later discarted. 
+				It is actually preferable to use only string literals, as String objects may have unwanted behaviour. 
+			
+				Example: 
+					eval(new String('2+2')) / returns the whole object unchanged
+					eval('2+2') // returns 4
+
+
+			As being an array every position can be accesed with the array notation and its index. 
+			But as being inmutable it cannot be changed. 
+
+
+		embedded expressions: 
+			if you want to write a string evaluating some variables you can do this with the `` (grave accent)	
+			console.log(`hello, I know that 1 + 2 is ${a+b} `);
+
+		multiline strings: 
+
+			before: 
+				var multiline="this is a \nmultiline\nstring"
+			now: 
+				var multiline=`this is a 
+				multiline 
+				string`
+
+		template expressions: 
+			Now it is possible to embed expressions in strings: 
+			before: 
+				var math="1+1 = " + parseInt(1 + 1)  + "; as everyone knows"
+				var math="1+1 = " + 1 + 1  + "; as everyone knows"
+					--> will lead to wrong result ( "1+1 = 11; as everyone knows" )
+			now: 
+				var math=`1+1 = ${1+1}; as everyone knows`
+
+
+
+		Internationalization: 
+			Intl object is the namespace for the ECMASCRIPT Internationalization API and therefore has like properties following. 
+
+			Intl.Collator: 
+				Orders Things with special locales. 
+			Intl.DateTimeFormat:
+				Formats dates to locales
+			Intl.NumberFormat: 
+				Formats Numbers to locales
+	Methods: 
+
+
+		charAt()
+			returns the char at specified index
+			--> will work like the accessing the string via array notation. 
+			When no argument is provided the index '0' is used. 
+
+		indexOf('search string','index to start looking'= 0 )
+			--> Cannot find values NaN !!!!!!!!!!!!!!!!!!!!!
+
+			Starting Index by default is 0. 
+			returns the index of the first letter of the searched string when there is a occurence. 
+			returns -1 if the searched string was not found. 
+			returns the starting index if the search string is an empty string. 
+
+
+		lastIndexOf('search string' , 'index to start looking=+Infinity');
+			Starting at index +Infinity to search from right to left. 
+			A starting index too big will result in searching the whole string anyways. 
+			A starting index too small (negative) will make the starting index to be 0. 
+			
+		startsWith('search string','start looking index'= 0 )
+			will return a boolean depending on if the substring starts with specified string or not. 
+			
+		endsWith('searchString','position'=string.length)
+			will return true if the string ends exactly with the searchstring. 
+			The position parameter indicates to test the string.length - position. 
+		
+		includes('searchstring','start index'=0)
+			returns true if the searched string has been found. 
+			The method is case sensitive. 
+
+		concat('string1','string2','...stringN')
+			returns all string concatenated. 
+			It is much better to use + instead of concat as the performance is much better. 
+
+		split('seperator-string or regex','splits cuantity to be done');
+			if the seperator is an empty string every letter will be inside an array index. 
+			if the seperator cannot be found the whole string will be found inside the first index of the array returned. 
+			if a regex is used to seperate and it has capturing groups, the capturing groups will also end up in the array. 
+				--> this feature is not supported by all browsers so watch out !!!!!
+
+
+		slice('beginINdex'=0,endIndex=str.length);
+			Extracts a substring using the limits as index. 
+			If beginIndex is smaller than 0 it is interpreted as String.length-startIndex
+			If beginIndex is bigger or equal an empty string will be returned. 
+			EndIndex is the index on where to stop. The stopped index will not be returned !!!!!		
+			If negative also this one will be treated as string.length - endingIndex
+
+		substring('baginIndex'=0,endIndex=str.length);
+			Same purpose as slice. 
+			if eighter index <0 then index = 0 
+			if either index >str.length then index = str.length.
+			The special thing about substring is that it swappes the beginIndex with the EndIndex when 
+			End index is bigger than the beginIndex. 
+
+		substr('beginIndex'=0,'length'=str.length-beginIndex)
+			same purpose as slice but has a length operator. 
+
+		match(/regex/)
+			returns an array containing the matched regex. 
+			No parameter given will return an empty array. 
+			If a string is passed as parameter this will be converted into a regex using the Regex constructor. 
+			No match will return null. 
+
+			There are two main cases when using match: 
+				1. using it without the g flag. 
+					--> the resulting array will two extra properties: 
+						1. input 
+							--> will return the original input 
+						2. index
+							--> will return the index where matched
+
+				2. using it WITH the g flag 
+					--> will return all results in array. 
+						
+
+		str.replace(regexp|substr, newSubstr|function)
+			
+			substr: 
+				when specifying the substring as string it only will replace the first ocurrence. 
+			newSubstr: 
+				The new substring can contain special chars: 
+				$$	Inserts a "$".
+				$&	Inserts the matched substring.
+				$`	Inserts the portion of the string that precedes the matched substring.
+				$'	Inserts the portion of the string that follows the matched substring.
+				$n	Where n is a positive integer less than 100, inserts the nth parenthesized submatch string, provided the first argument was a RegExp object.
+
+			function: 
+				match	The matched substring. (Corresponds to $& above.)
+				p1, p2, ...	The nth parenthesized submatch string, provided the first argument to replace() was a RegExp object. 
+					(Corresponds to $1, $2, etc. above.) For example, if /(\a+)(\b+)/, was given, p1 is the match for \a+, and p2 for \b+.
+				offset	The offset of the matched substring within the whole string being examined. 
+					(For example, if the whole string was 'abcd', and the matched substring was 'bc', then this argument will be 1.)
+				string	The whole string being examined.
+				
+
+			
+		search(regexp)
+			--> will return the index of the first found substr and -1 if nothing was found. 
+			When the param is a string it will be converted to a regex using its Constructor new Regex("stringPassed"). 
+
+
+			
+		toLowerCase(),toUpperCase()
+			--> will return the string converted entirely 
+
+
+		repeat('times_to_repeat');
+			repeats the string object the specified times. 
+			cannot be smaller than 0 and not bigger than maximum string size nor +Infinity
+			floating-numbers will be trimmed to integer. 
+
+
+		trim()
+			will remove leading and tailing whitespace from a string. 
+
+
+Regular Expressions: 
+
+	Regex literals: 
+		var regex_literal=/^\s*regex\s*literal\s*$/; 
+			--> as all literals this is compiled when the script is loaded. 
+			When this regex will not change in the future this will be the optimal way of declaring it. 
+			Less resource intense. 
+
+	Constructor: 
+		var regex_constructor = new Regex('^\s*regex\s*constructed\s*$')
+		This will be loaded at runtime. 
+		So this should be used if the regex is unknown until user input for example. 
+
+	Note: 
+		the regex obj has 5 properties: 
+			-global/ignoreCase/multiline
+				--> will tell whether a special flag has been used
+			-source
+				--> is the regex itself as string
+
+			-lastIndex
+				--> The next position where a match can be (only different than 0 when global Flag was specified). 
+
+		
+		The sticky flag: 
+			with the /something/y sticky flag the lastIndex property is taken into account. 
+			so that: 
+			
+				var reg=/foo/y
+				reg.lastIndex=2; 
+				reg.test("foo"); //false
+	
+		                var reg=/foo/
+	                        reg.lastIndex=2;
+	                        reg.test("foo"); //true
+
+
+		special regex chars (things I didn't know ):
+
+		?:
+			when used with a greedy expression like \d+? will match the ungredeest like 
+			12341234 --> matches 1 
+
+		.: 
+			matches every char except of '\n'
+
+		(): 
+			groups can be reused in the matching part. 
+				example:first match grouped can be re-referenced with  \1 ...
+
+			in the sustitution part $N expression must be used. 
+				example: 
+					/(chocolate)\s+ice\s+with\s+\1\s+souce/.test("chocolate ice with chocolate souce")
+						--> true
+					"chocolate ice with chocolate souce".replace(/(chocolate)/g,"$1 kaka")
+						--> "chocolate kaka ice with chocolate kaka souce"
+		[a-z]
+			chars like * and . are not considered special inside the Character set. 
+	
+		[^a-z] 
+			negates the character SET. All small letters are invalid.
+
+		\b 
+			Matches a word boundary. A word boundary matches the position where a word character is not followed or preceded by another word-character.
+
+			/\bm/.test("moon");; //true
+			/on\b/.test("moon"); //true
+			/\boo/.test("moon"); // false as there still is 
+			/\w\b\w/.test("whatever"); // will never be true
+
+
+		\B 
+			Matches a non-word boundary. This matches a position where the previous and next character are of the same type. 
+
+			
+		\D 
+			Matches a non-digit character
+
+		\S
+			Matches a non white space
+
+
+	Prototype methods: 
+
+		test: 
+			--> will return a boolean depending if the passed string matches or not to the regex
+
+		exec: 
+			--> will return null when nothing found or an 
+			Array, which contains as first object the match and all following for the matched group. 
+
+			Also returns some properties 
+				REGEX LITERAL: 
+
+					index:
+						First match index of string provided. 
+					input:
+						Original string provided to regex. 
+
+			exec can be used multiple times when a Global Flag was specified. It will always return the next match possible. 
+					
+				
+
+
+						
+Indexed Collections: 
+
+	ARRAY: 
+
+		Creation: 
+			
+			var arr=new Array(element1,element2,...elementN);
+			var arr=[element1,element2,...elementN] //called 'array literals' or array initializer
+
+			Note: 
+				Arrays can be created that have a non zero length with following syntax:
+			
+				var arr=new Array(100);
+				var arr=[];arr.lenght=100;
+
+		Changing the length value: 
+			When this is done simply the array items indexted on the new length-1 will be lost. 
+			So it is possible to delete an array asigning the length porperty 0. 
+
+
+		Iteration: 
+			for loop : 
+
+			Array.forEach(function(){};)
+				Executes the function passed to forEach in every iteration for every defined object. 
+				If there is a not defined element this one will be skipped. The not defined element althought can be listed when it was assigned by hand. 
+
+
+		Prototype Methods: 
+
+			concat(array1,array2,..arrayN)
+				Takes the original array and adds all the elements of the other array objects or elements provided to this function 
+				TO A NEW OBJECT AND RETURNS IT !!.  
+
+			push(element1,element2..elementN)
+				can be used with Function.prototype.call() or Function.prototype.apply() on objects reesembling arrays. 
+				Will add elements to the given Array Object based on the length property and return the new length property. 
+
+			pop()
+				generic and aplicable with call() and apply(). 
+				Will remove the last element from an array and return it or return 'undefined'. 
+
+			shift()
+                                generic and aplicable with call() and apply().
+				Will remove the index[0] element in an array like object and shift all missing elements to [index-1]. 
+				Returns the shifted element or undefined when array.length==0
+
+			unshift(element1,element2...elementN);
+                                generic and aplicable with call() and apply().
+				Will insert the new elements starting at index[0] and shift all the original elements to array[index+elementsListPassed.length]. 
+				Returns the new length propertiy of Object. 
+				This is not like concat as it will fit the passed array reference to only 1 index. 
+				example: 
+					var arr=[1,2,3,4,5]
+					var arr_2=['a','b','c']
+					arr.unshift(arr,'new','one')
+					8
+					arr
+					[Array[8], "new", "one", 1, 2, 3, 4, 5]
+
+
+			slice(startIndex,EndIndex)
+				will take the object and extract the array begininning from the startIndex and ending one before the endIndex. (endIndex not included). 
+				Returns a copy of the provided sub-Array and will not modify the original array. 
+				Both params are optional. 
+				Both params can be < 0, which indicates the offset. So a startingIndex of -3 means arr.length-3 
+
+			splice(startIndex,deleteCount,element1,element2...elementN)
+				startIndex:
+					starting point from which on to begin with modifications.
+					can be negative to provide the offset.
+
+				deleteCount: 
+					deletes the amount of elements starting from startpoint. 
+					defaults to arr.length - start !!!!
+				elementN:
+					All elements which will be inserted into the array starting from startIndex once the deleting operation has been fulfilled. 
+			
+				Returns an array with the delted values. Empty Array in case of no deletion. 
+
+
+			reverse()
+				will reverse the whole array in place and return an array reference (which is useless). 
+			sort(comparFunction)
+				will sort the specified arary using by default the characters Unicode point for decision. 
+				when a compareFunction is provided it will be taken for the decision of sorting. Like in PERL. 
+				-1 -> will be sorted upwards
+				0 -> nothing will be done (althought this is not supported by older browser versions)
+				+1 -> will be sorted donwards
+					example: 
+						arr.sort((a,b)=>{ if( a<b ){return -1 ;}else if(a>b){ return 1; }else{ return 0; } })
+							[0, 1, 2, 3, 4, 5, 8, 9, 10]
+						arr.sort((a,b)=>{ if( a<b ){return 1 ;}else if(a>b){ return -1; }else{ return 0; } })
+							[10, 9, 8, 5, 4, 3, 2, 1, 0]
+				
+				
+			indexOf(Searched[,startIndex])
+				will strictly compare the whole array against the searched and in case of found return the first index. 
+				will return -1 if nothing was found. 
+
+			lastIndexOf(Searched[,startIndex])
+				will strictly compare the whole array starting at startIndex(defaults to arr.length -1 ) backwards 
+				until reaching the start of the array (index 0 ). 
+				returns the first index(looking backwards all the time ... ) where the searched is found and -1 if not found. 
+
+
+			ITERATIVE FUNCTIONS: 
+
+				THEY all have the same parameter which can be used inside the callback function: 
+				Parameters: 
+					-callback( currentValue,index,array )
+					-thisArg	
+
+				This functions will set the range of elements to be visited before the first invocation of a callback. 
+				So: 
+					--> Elements being appended after the first invocations will not be visited: 
+
+						var arr=[1,2,3];
+						arr.forEach( (cv,i,array)=> { console.log("logging currVal= "+ cv);array.push(i+10) } )
+						VM513:1 logging currVal= 1
+						VM513:1 logging currVal= 2
+						VM513:1 logging currVal= 3
+						arr
+						[1, 2, 3, 10, 11, 12]
+
+					-->Elements that are modified after the initial callback call will stay the same: 
+
+						var arr=[1,2,3];
+						arr.forEach( (cv,i,array)=> { console.log("current value = " + cv );  if(array[i+1] !=='undefined'){ array[i]=cv+10} });
+						VM925:1 current value = 1
+						VM925:1 current value = 2
+						VM925:1 current value = 3
+						arr
+						[11, 12, 13]
+
+
+					--> Unshifting will affect the iteration of future elements
+						var arr=[1,2,3,4,5,6,7,8,9,10];
+						arr.forEach( (cv,i,array)=> { console.log("logging currVal= "+ cv);array.shift() } )
+						VM427:1 logging currVal= 1
+						VM427:1 logging currVal= 3
+						VM427:1 logging currVal= 5
+						VM427:1 logging currVal= 7
+						VM427:1 logging currVal= 9
+
+
+					--> Elements are about to be visited but have been removed will not be visited: (this is not following the same rules ...)
+
+					var arr=[1,2,3,4,5];
+					arr.forEach( (cv,i,array)=> { console.log("current value = " + cv );  if( i === 0){ array.splice(1,3)} });
+					VM1048:1 current value = 1
+					VM1048:1 current value = 5
+
+			forEach()
+				will iterate through all elements in the array. 
+				Returns always undef; 
+				The forEach function cannot be manually stoped when a condition is reached other than throwing an exception. 
+				If this is considered to be done, the choice of loop has been wrong !!!!
+				Sparse: --> will not be taken into consideration
+
+			map() 
+				will take the specified action on every element and return a copy of the newly generated array. 	
+				Sparse: --> will be taken into consideration !!!
+
+			filter()
+				will iterate through every element in the array and return a new array depending on the return value. 
+				The return value of the callback must coerce to a truthy value so that the element will be present in the returned array.
+
+			every()
+				will iterate through every element in the array and determine whether all elements fall under the same condition. 
+				This is decided with the return value of the callback. 
+				DANGER !!!! VACOUS TRUTH applied (empty === true ) !!!!!
+				Sparse: --> will not be taken into consideration
+
+			some()	
+				Same as every but only one element must comply with condition. 
+
+			reduce()
+				Iterates through the array and will take a callback function as parameter which slighly difers from the one used in all other iterative functions. 
+				Sparse: --> will not be taken into consideration. 
+
+					reduce( callback( accumulator,currentValue,currentIndex,origArray ), InitialValue(optional but not recommended NOT using it ...) )
+					
+					accumulator will take the InitialValue if provided. 
+					If not it will use the first element of the array passed. 
+
+					Example:
+	
+					var arr=[1,2,3,4,,,5,];
+					arr.reduce( (a,cv)=> a+cv,0  );
+					15
+			reduceRight()
+				Same as reduce but starts at the last Index and goes up to the first (0). 
+
+	
+
+		Array prototype methods can be called against other array-like objects even strings as they are sequencially indexed as well.
+		 
+			Example:
+				Array.prototype.forEach.call( 'abcv',(cv)=>{ console.log("cv = "+cv) } )
+				VM364:1 cv = a
+				VM364:1 cv = b
+				VM364:1 cv = c
+				VM364:1 cv = v
+
+
+
+		
+		Typed Arrays: 
+			JavaScript typed arrays are array-like objects and provide a mechanism for accessing raw binary data.
+			Those arrays are devided into Buffers and Views. 
+			More info: 
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays
+
+
+Keyed Collections
+		
+	Maps: 
+
+		Maps link values to keys inside a map object. For creation the Map() constructor must be used. 
+		This traditionally was done by using objects. The Map [keys,values] can be iterated through (at the same time) with the for ... of 
+		Use the same-value-zero-alorithm to decide whether a key can be found or not. 
+		
+
+		There are a few advantages in using Maps though: 
+			1. They will be iterated in insertion order. 
+			2. The amount of elements is accesible. 
+			3. The keys/values can be any primitive type or even be Objects . 
+
+		Methods: 
+
+			Prototype methods: 
+
+			Map.prototype.size 
+			Map.prototype.delete(key)
+			Map.prototype.entries()
+				--> returns an iterable object which contains both keys and values:
+
+				Example: 
+					for( m of map.entries()){ console.log( "key = " + m[0]+ " value ="+m[1] );}
+					VM400:1 key = string1 value =value1
+					VM400:1 key = string2 value =value2
+					VM400:1 key = string3 value =value3
+
+			Map.prototype.forEach( callback()[,this])
+			Map.prototype.get(key)
+			Map.prototype.has(key)
+			Map.prototype.keys()
+				--> returns iterator object with keys
+			Map.prototype.set(key,value)
+			Map.prototype.values()
+				--> returns iterator object with values
+
+
+			Arrays and Maps: 
+
+				var kvArray = [['key1', 'value1'], ['key2', 'value2']];
+
+				// Use the regular Map constructor to transform a 2D key-value Array into a map
+				var myMap = new Map(kvArray);
+				
+				myMap.get('key1'); // returns "value1"
+				
+				// Use the Array.from functon to transform a map into a 2D key-value Array
+				console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
+				
+				// Or use the keys or values iterators and convert them to an array
+				console.log(Array.from(myMap.keys())); // Will show ["key1", "key2"]
+
+	WeakMap
+		--> to Do's: 
+			understand: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap 
+
+
+	Sets: 
+		Sets contain values only (which means it could be like an array). The difference is that they uniquly contain value. So when a value is inserted again
+		just nothing will happen. They also can be iterated through in order of insertion (duplicates do not modify this behaviour). 
+		Use the same-value-zero-alorithm to decide whether a value can be found or not. 
+
+			
+
+		difference between arrays: 
+			1. You do not need to keep track of duplicates yourself. 
+			2. searching for contents inside a set is faster than using indexOf and NaN can be found not like indexOf . 
+			3. You can refere to the contents by using the actuall value instead of the index. 
+		
+
+		Methods: 
+
+			Prototype methods: 
+
+			Map.prototype.size 
+			Map.prototype.add(value)
+			Map.prototype.delete(value)
+			Map.prototype.entries()
+			Map.prototype.forEach( callback()[,this])
+			Map.prototype.has(value)
+			Map.prototype.values()
+				--> returns iterator object with values
+			Map.prototype.keys()
+				--> same as values()
+
+	WeakSet
+		--> to Do's: 
+		understand: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
+			
+			
+
+	same-value-zero-alorithm: 	
+		Means it uses === for almost everything. 
+		-0 and +0 is considered the same. 
+		NaN is only equal to itself. 
+
+
+
+Objects
+
+	Properties: 
+		Can be declared with the dot notation or even the bracket notation. 
+		All properties are Strings. Even when using a non-String type it will cause the toString function to be triggered to access the property. 
+		An empty property returns undefined. 
+
+	 	Properties cannot be following when dot annotation wants to be used: 
+			- start with a number
+			- contain a hyphen
+			- contain a space 
+
+		Iterating through properties: 
+			for (var in Object)
+				--> Gets all the objects properties even the prototype ones. To filter out use Object.prototype.hasOwnProperty() . 
+				
+
+			Object.keys(initiated_object)
+				--> will get only the enumerable own Property keys of the object passed.
+
+			Object.getOwnPropertyNames(initiated_object) 
+				--> will get only the enumerable and not enumerable own Property keys of the object passed.
+
+
+
+	Create new Objects: 
+
+		Object initializer (creating objects with literal notation ): 
+			This objects even if created equally will result in a different object everytime it is created. 
+			creation:
+			var obj= { head:'empty', burp:()=>{console.log("urrrrr")}};	
+			var Human={head:'empty',heart:'empty',slave:true,love:()=>{console.log("hugs for everyone")}, hate(){ console.log("I hate lazy people")}};
+
+
+
+		Constructor function: 
+
+			convention: 
+				first letter in Uppercase !!!!
+
+			creation: 
+				function Car(model,built_year,speed){
+					this.model=model;
+					this.built_year=built_year;
+					this.speed=speed;
+					this.sayHello=()=>{console.log("Hello")}
+					this.sayBye(){console.log("Bye")}
+				}
+				var ford=new Car('ford',1988,200);
+
+		
+		Object.create
+			lets you create a object out of an object initializer like: 
+
+			var Car={ head:'empty', burp:()=>{console.log();}};
+			var ford=Object.create(Car);
+
+
+			
+
+			
+
+			
+	Inheritance: 
+
+		Every object at least has inherited from one object before. 
+		This object is known as prototype. 
+		The inherited properties can by found in the prototype Object of the property. 
+		This can be used to define a new property for all the instances made of one Object-type: 
+
+			Example: 
+
+				function Human(name){
+				    this.name=name;
+				}
+				var human1 = new Human('Romeo');
+				var human2 = new Human('Lucia');
+				Human.prototype.sayHello=()=>{console.log("hello world!")}
+				human1.sayHello()
+				VM563:1 hello world!
+				undefined
+				human2.sayHello()
+				VM563:1 hello world!
+
+
+	getter and setter:
+		This is normally used when we need to access some computed properties. 
+		Will define a function that lets us access a property, but actually a function will be used to assign whatEver 'real' property
+		behind this function. 
+
+
+		-can only be used in object initializer like: 
+				var test = {x:666, get y(){ return this.x/2 ; }, set y(new_val){ this.x=new_val/2}  }
+		-if used after a object has been initialized or in a constructor it must be done via the Object.defineProperty() method. 
+
+		
+
+
+	Methods: 
+
+		Object.defineProperty(obj,new_property_name,descriptorObject) 
+			This methods lets you add a property to an already defined object. 
+			It will make it by default 
+				-inmutable and
+				-not enumerable (ojb.keys() neither for .. in loop will show the added property)
+
+				important: To securely add a property without having a prototype overwrite it you should 
+				1. set __proto__ to null, so that inheritance is directly deleted. 
+				2. Set all possible values of the descriptorObject. !!!!!
+  
+			--> returns the object passed to the function. 
+			
+			Example: 
+				function Car() { 
+					let name =  "default_car_name";
+					let brand = "Ford" ;
+				};
+				car = new Car();
+				car.addedDirectlyProp='directly Added'
+				car2 = new Car();
+				car.addedDirectlyProp
+				car2.addedDirectlyProp
+				undefined
+				
+				Car.prototype.protoTypeAddedDirectly='Added directly to prototype ... '; 
+				"Added directly to prototype ... "
+				car2.protoTypeAddedDirectly
+				"Added directly to prototype ... "
+				
+				car.protoTypeAddedDirectly
+				"Added directly to prototype ... "
+				
+				for( let property in car ){ console.log("found property = "+property)}
+				VM246:1 found property = addedDirectlyProp
+				VM246:1 found property = protoTypeAddedDirectly
+				
+				for( let property in car2 ){ console.log("found property = "+property)}
+				VM400:1 found property = protoTypeAddedDirectly
+				
+				Object.keys(car);
+				["addedDirectlyProp"]
+				Object.keys(car2);
+				G[]
+		
+				Same result as in Object.keys can be obtained with he hasOwnProperty() function: 
+
+				for( let property in car ){  if(car.hasOwnProperty(property) ){ console.log("found property = "+property)}else{console.log("prototyped prop = "+property);}   }
+				VM2215:1 found property = addedDirectlyProp
+				VM2215:1 prototyped prop = protoTypeAddedDirectly
+
+				for( let property in car2 ){  if(car.hasOwnProperty(property) ){ console.log("found property = "+property)}else{console.log("prototyped prop = "+property);}   }
+				VM2218:1 prototyped prop = protoTypeAddedDirectly
+
+
+		Deleting properties: 
+
+			Only non inherited properties can be deleted. 
+			And in general everything that has been declared with the keyword 'var'	
+
+
+
+		Comparing Objects: 
+
+			Objects if they are not the same object will always return false when compared strictly: 
+
+			function Car(){  this.sayHello=function(){console.log("Hello");}  }
+			var c = new Car()
+			var d = new Car()
+			c === d 
+			false
+			c == d 
+			false
+
+
+
+Generators and Iterators: 
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				TO READs 
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays --> optionally if streaming needed !!!!
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+				https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
+GRAMMAR: 
+
+	- instructions: 
+		-->  are called 'statements'. 
+
+	- names of variables: 
+		--> are called 'identifiers'. 
+
+		allowed Identifiers: 
+			--> must start with [a-zA-Z] or '_' or '$' 
+			can be followed by [0-9]
+	
+	
