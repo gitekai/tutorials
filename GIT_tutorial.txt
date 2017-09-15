@@ -269,6 +269,9 @@
 			--graph
 				--> displays an ascii art graph representing the merge history 
 
+			--decorate 
+				--> will also display the pointers(branches) connecting with each commit object. Even the head is listed. 
+
 
 			--pretty=FORMAT
 
@@ -547,13 +550,44 @@
 
 3.1 Branching in a nutshell 
 
-	
+	3.1
+	3.2
+		--> skipped because of being explanatories. Might still be fixed that. 
+		https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell
+
+		
+	3.3 Branching Management: 
+
+		git branch 
+			--> will list all the branches there are in a porject. Also indication with an asterisk where HEAD is pointing to. 		
+
+		git branch -v 
+			--> will show the last commit of every branch. 
+
+		git branch --merged 
+			--> will show all branches that are already merged into the branch you are at this moment (where HEAD points to). 
+				NOTE: This means that those branches can be eliminated without carrying. 
+
+		git branch --no-merged: 
+			--> will show the branches that havent been merged yet. 
 		
 		
 		
-		
-		
-		
+	3.4 Git Workflows.
+		--> concepts only 
+		https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+
+	3.5 Git Branching - Remote Branches		
+		git ls-remote 
+			--> will show remote branches
+		git remote show 
+			--> will show remote branches and much more 
+		git push <remote-shortname> [local_branch[:external_branch]]
+			--> will push the information on specified local branch to the remote server with the same branch name if nothing other is specified 
+			or with the specified name provided with ':remot_branch_name'
+
+
+			
 
 
 
