@@ -67,16 +67,16 @@ Zahl	Person			Verb oder Objekt
 
 major buchstaben 
 
-	1 	T,D
-	2 	n
-	3	m
-	4	r	
-	5	l
-	6	sch,ch,j
-	7	k,ck,Q,g
-	8	v,w,f,ph
-	9	p,b
-	10	s,z,sz
+1 	T,D
+2 	n
+3	m
+4	r	
+5	l
+6	sch,ch,j
+7	k,ck,Q,g
+8	v,w,f,ph
+9	p,b
+10	s,z,sz
 
 einstellige Major-Begriffe
 
@@ -108,10 +108,10 @@ zweistellig Major-Begriffe
 
 10	Tasse
 11	Tod
-12	Tonne -> hab ein wenig gebraucht
-13 	dom 
+12	Tonne 
+13 	dom 	--> Robin hood versucht sich mit einem dreizack und bekäft dabei einen DOM. Der dreizack zerbricht und Robin geht wieder zu seiner alten Waffe zurück. 
 14 	tor
-15	tal ?¿?¿?¿?¿?¿
+15	tal 
 16	Tisch	
 17	theke
 18	taufe
@@ -125,79 +125,77 @@ zweistellig Major-Begriffe
 24	narr
 25	Nil	
 26	niesche
-27	honig --> sehr lange gebraucht
+27	honig 
 28	Neffe
-29	Anbau 
+29	Anbau 	--> Der Schwan fliegt ueber seinen Bauernhof und kackt in die Lócher im flug um zu sähen. 
 
 
 30	
 31
-32	Miene 	--> Der Teufel sperrt den Schwan in eine Miene ein aus die er am Anfang nicht herauskommt (zu weiche rosa (schwule) Federn). 
-		Die Kohle macht ihn schwarzt (Black-Swan) und dadurch bekommt er Ueber kräfte die Ihm bei der Flucht helfen.  
-33
-34
+32	Mohn	--> Der Teufel schwimmt in einer Mohn-plantage. Als er von der Polizei erwischt wird,gibt er  positiv auf Opiate. Ab in den Knast ! 
+33	Mumie 	--> Der Teufel spiesst seine Ungehörige Mumie auf die auf einmal lieb zu den Menschen ist. 
+34	Meer	--> Der Teufel wird aus der Hölle verband und nimmt sein Trohnstuhl als boot um auf einer einsamen Insel unterschlupf zu suchen bis er wieder an der Reihe ist. 
 35
 36
-37	Mücke	--> 
-38
-39
+37	Mücke
+38	Möwe	--> Der Teufel zündet den Schabel einiger Möwen an aus Spass um die Mówen schmelzen zu sehen und diese Schmelze dann den Höllen insassen als trank zu geben. 
+39	Mop	--> Der Teufel fliegt wie eine Hexe auf seinem Mop und tröpfelt alle menschen mit seinem dreckwasser voll
 40
-41	Ratte	--> Ein Rennen findet statt. Die ratte steuert eine Rakete und tritt gegen einen Pfeil an ... und gewinnt ... Schiesst leider ueber das Ziel hinaus und gelangt zu Kim-Jong-Un. UPS....
+41	Ratte
 42
-43
+43	Rum 	--> Ein Stuhl der zuviel getrunken hat spiesst seinen letzten Rum auf aus Wut darauf, dass er leer gegangen ist. 
 44
 45
 46	Rauch 
 47
 48
 49
-50
-51
+50	Lasso 	--> Schwangere Frau muss auf einer Ferie ein sich bewegendes Ei mit einem Lasso einfangen. (Gewinnt und isste es gleich Roh!)
+51	Latte	--> Schwangere Frau spielt gegen FC-Barcelona und bekommt leider nur einen lattenschuss hin. Alle Frauen sind entäuscht. 
 52
 53
 54
-55
+55	Lolli	--> Schwangere frau ist am gebahren und bringt einen riesen Lolli zur Welt. Das Druecken war wegen des grossen Kopfes ungewöhnlich schwer. 
 56
-57
-58	Löwe	--> befreit schwangere frau von ketten 
+57	Lok	--> Ein Mann wurde von einer Lok ueberrollt und eine Schwangere frau hebt die lok an wobei sie soviel Kraft aufwendet dass sie gebahrt und gleichzeitig den Mann rettet. 
+58	Löwe	
 59
 60
 61
-62
+62	Schein	--> Der Groupier fliegt zur Sonne um dort die Karten zu verbrennen die Die Bank verlieren lassen. Er kommt mit verbrannten Karten zurûck und kann keinen jackpot ausliefern. 
 63
 64
-65
+65	Schule	--> Der Groupier meldet sich freiwillig um in der schule ein paar wurfel zu gebähren. (aus seinem Arsch ...). Alle Schüler sind hellauf begeistert. 
 66
 67
-68	Schaf	--> Von einem Kirschenbaum Hangen Ketten an denen die kirschen befästigt worden sind wo das schaaf (dass die Kirschen essen will) sich erhänget
+68	Schaf
 69
 70
 71
-72	Kino	-->  Bauarbeiter bitted Schwarn auf den Knien ins Kino aus. Romantisch!!!!
+72	Kino	--> Bauarbeiter schwimmt im Fluss in die Nahe eines Kinos. Dort angekommen macht er halbnackt den Cocacola typen. 
 73
-74
+74	Kur	--> Der Bauerbeit sizt in einem massage-Sessel mit Schlammmaske und Gurken auf den Augen. Und lasst sich die Kur geniesen. 
 75
 76
-77
-78	Kaffee	--> Der krahn and dem die krankette runter hangt schlagt die kaffeebohen ab so dass leute die unter diesen Baum stehen diese direkt zitternd zerkauen. 
+77	Geige	--> Der Bauarbeiter in einem Hausbau muss eine tonnen-schwere riesen Geige hochziehen ins oberste Stockwerk. (mit einem Seilzug). Viele müssen ihm dabei behilflich sein. 
+78	Kaffee	
 79	Kappe
 80
 81
-82
-83
+82	Fön	--> Der Schneeman will sich umbringen und schwimmt deswegen mit seinem Fön die Donau entlang. (Nichts passiert ...)
+83	WM	--> Der Schneeman spiesst heuhaufen in der Heuhaufen-aufspiez-WM teil. Der gewinner muss die meisten Heuhaufen aufgestochen haben. 
 84
 85
-86
+86	Fisch	--> Der Schneeman vergnügt sich mit seinem neuen fisch-würfeln. sie bestehen aus eiswürfeln und die fischaugen sind die "augen"-zaheln. XDD 
 87
-88
-89
+88	Waffe	--> Der Schneeman merkt dass Es sommer wird und er schmiltzt. Er nimmt sich mit seiner Waffer (welche er unter seinem Kissen aufbewahrt) das leben. 
+89	Wabe	--> Ein Schneeman fliegt in seine Wabe hinein wo er seine schneeman-kinder aus dem hund mit wasser futtert. 
 90
 91
 92
-93	Baum 	--> Der letzte Baum wird von der Menschheit zum Mond geschickt. Neuer Lebensraum. Die Menschheit stirrt gespannt wie der Baum im Heissluftbalon hochgeschickt wird. 
-		Da kommt der Teufel und schmeisst sein Dreizack gegen den Ballon. Die Menschheit sieht wie er abstürzt und ist zu tiefst erschüttert. 
+93	Baum 
 94
-95
+95	Ball	--> Der luftballon gebähr einen Ball dem er das fliegen beigringen will es aber nicht schafft. Der ball stattdessen muss sich mit dem getreten werden abfinden. Was ein Scharm !!!!
 96
 97
 98
