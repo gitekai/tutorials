@@ -1,0 +1,210 @@
+Das kleine 1x1
+
+1	Pfeil
+2	Schwan 
+3	Dreizack
+4	Stuhl 
+5 	schangere Frau 
+6	Würfel --(Kirsche is dead)
+7	Kran -- sieben Zwerge
+8	Schneemann -- Kette 
+9	Ballon 
+0	Ei 
+
+
+
+Das kleine 1x1 PO (Personen Objekt)
+
+
+Zahl	Person			Verb oder Objekt	
+1 	Robin Hood 		Pfeil / schiessen
+2	Schwan 			schwimmen / See
+3	Teufel 			aufspiessen / Dreizack
+4	Kind			kippeln / Stuhl 
+5 	schwangere Frau 	gebähren 
+6	Groupier		würfeln / Würfel
+7	Zwerge 			singen					7       Bauarbeiter             heben / Kran
+8 	Schneeman		schmiltzt
+9	Ballon			fliegt
+0	Huhn 			legt ein ei
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+major buchstaben 
+
+	1 	T,D
+	2 	n
+	3	m
+	4	r	
+	5	l
+	6	sch,ch,j
+	7	k,ck,Q,g
+	8	v,w,f,ph
+	9	p,b
+	10	s,z,sz
+
+einstellige Major-Begriffe
+
+1.	Tee
+2.	Noah
+3.	Oma
+4.	Reh
+5.	Lee
+6.	Schi
+7.	Kuh
+8.	Fee,Ufo
+9.	Opa,Po
+10	Zeh,See
+
+
+
+zweistellig Major-Begriffe
+
+01	Sosse 
+02	Seide
+03	Saum
+04	zar
+05	seil
+06	Sushi 
+07	sack
+08	sofa
+09	suppe
+
+
+10	Tasse
+11	Tod
+12	Tonne -> hab ein wenig gebraucht
+13 	dom 
+14 	tor
+15	tal ?¿?¿?¿?¿?¿
+16	Tisch	
+17	theke
+18	taufe
+19	tube
+
+
+20	nase
+21	naht 
+22	nonne
+23	NEMO
+24	narr
+25	Nil	
+26	niesche
+27	honig --> sehr lange gebraucht
+28	Neffe
+29	Anbau 
+
+
+30	
+31
+32	Miene 	--> Der Teufel sperrt den Schwan in eine Miene ein aus die er am Anfang nicht herauskommt (zu weiche rosa (schwule) Federn). 
+		Die Kohle macht ihn schwarzt (Black-Swan) und dadurch bekommt er Ueber kräfte die Ihm bei der Flucht helfen.  
+33
+34
+35
+36
+37	Mücke	--> 
+38
+39
+40
+41	Ratte	--> Ein Rennen findet statt. Die ratte steuert eine Rakete und tritt gegen einen Pfeil an ... und gewinnt ... Schiesst leider ueber das Ziel hinaus und gelangt zu Kim-Jong-Un. UPS....
+42
+43
+44
+45
+46	Rauch 
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58	Löwe	--> befreit schwangere frau von ketten 
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68	Schaf	--> Von einem Kirschenbaum Hangen Ketten an denen die kirschen befästigt worden sind wo das schaaf (dass die Kirschen essen will) sich erhänget
+69
+70
+71
+72	Kino	-->  Bauarbeiter bitted Schwarn auf den Knien ins Kino aus. Romantisch!!!!
+73
+74
+75
+76
+77
+78	Kaffee	--> Der krahn and dem die krankette runter hangt schlagt die kaffeebohen ab so dass leute die unter diesen Baum stehen diese direkt zitternd zerkauen. 
+79	Kappe
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93	Baum 	--> Der letzte Baum wird von der Menschheit zum Mond geschickt. Neuer Lebensraum. Die Menschheit stirrt gespannt wie der Baum im Heissluftbalon hochgeschickt wird. 
+		Da kommt der Teufel und schmeisst sein Dreizack gegen den Ballon. Die Menschheit sieht wie er abstürzt und ist zu tiefst erschüttert. 
+94
+95
+96
+97
+98
+99
+100
+
+
+
+
+
