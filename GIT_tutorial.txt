@@ -394,7 +394,7 @@
 	Fetching information from repos: 
 
 		git fetch <shortname|URL>
-			This will download all the branches from the remote repo and make them accesible to your project. 
+			This will download all the branch references from the remote repo and make them accesible to your project. 
 			NOTE: This will NOT merge any changes, you must do this manually. 
 
 	
@@ -584,7 +584,9 @@
 			--> will show remote branches and much more 
 		git push <remote-shortname> [local_branch[:external_branch]]
 			--> will push the information on specified local branch to the remote server with the same branch name if nothing other is specified 
-			or with the specified name provided with ':remot_branch_name'
+			or with the specified name provided with ':remote_branch_name'
+
+	
 
 
 			
