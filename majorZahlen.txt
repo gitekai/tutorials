@@ -97,11 +97,11 @@ zweistellig Major-Begriffe
 
 01	Sosse 
 02	Seide
-03	Saum
+03	Saum	--> Ein Bauer kann keine Freunde einladen .. Er hat ein Huhn das alle Gäste angreift und ihre Kópfe als trophäe aufspiesst und im Hof stehen lasst. 
 04	zar
-05	seil
+05	seil	--> Ein Huhn das am gebähren ist wird mit einem Seil kräftig nachgeholfen. Es ist ein ... Ei !
 06	Sushi 
-07	sack
+07	sack	--> Viele Hühner werden ausgebäutet und müssen schwere Sacke in den silo bringen. Alle in einer Reihe, wie sklaven. 
 08	sofa
 09	suppe
 
@@ -126,7 +126,7 @@ zweistellig Major-Begriffe
 25	Nil	
 26	niesche
 27	honig 
-28	Neffe
+28	Neffe	--> Der Schwan zeigt seinem Neffen wie man plastik schmiltzt. Um die Schwester schön sauer zu machen. Neffe ist im haus und zerschmiltzt sogar den Fernseher !!!
 29	Anbau 	--> Der Schwan fliegt ueber seinen Bauernhof und kackt in die Lócher im flug um zu sähen. 
 
 
@@ -136,24 +136,24 @@ zweistellig Major-Begriffe
 33	Mumie 	--> Der Teufel spiesst seine Ungehörige Mumie auf die auf einmal lieb zu den Menschen ist. 
 34	Meer	--> Der Teufel wird aus der Hölle verband und nimmt sein Trohnstuhl als boot um auf einer einsamen Insel unterschlupf zu suchen bis er wieder an der Reihe ist. 
 35
-36
-37	Mücke
+36	Muschi	--> Der Teufel verspricht mit einem Glücksspiel, dass der gewinner Muschi bekommt. Ein Mann wurfelt eine 6, bekommt den Preis. Es regnet schleimige muschies herab. 
+37	Mücke	--> Der Teufel hebt eine gestorbenen Múcke auf und hebt sie in einer ringschachtel auf als andenken der ersten Malaria Müecke. 
 38	Möwe	--> Der Teufel zündet den Schabel einiger Möwen an aus Spass um die Mówen schmelzen zu sehen und diese Schmelze dann den Höllen insassen als trank zu geben. 
 39	Mop	--> Der Teufel fliegt wie eine Hexe auf seinem Mop und tröpfelt alle menschen mit seinem dreckwasser voll
 40
-41	Ratte
+41	Ratte	--> Ein Stuhl erschreckt sich vor einer Ratte und rettet sich auf einen anderen stuhl. Von dort aus erschiesst er die Ratte mit 10 Schussen. 
 42
 43	Rum 	--> Ein Stuhl der zuviel getrunken hat spiesst seinen letzten Rum auf aus Wut darauf, dass er leer gegangen ist. 
 44
 45
 46	Rauch 
-47
+47	Rock	--> ein perversling hat einen Stuhl fabriziert der die Röcke aller frauen anhebt und ihre teile blossstellt. 
 48
 49
 50	Lasso 	--> Schwangere Frau muss auf einer Ferie ein sich bewegendes Ei mit einem Lasso einfangen. (Gewinnt und isste es gleich Roh!)
 51	Latte	--> Schwangere Frau spielt gegen FC-Barcelona und bekommt leider nur einen lattenschuss hin. Alle Frauen sind entäuscht. 
 52
-53
+53	Leim	--> Die Schwangere Frau spiest ihre fruchtblase auf und klebt das frisch erongene Kind als dekoration an die Wand. Macht sich gut dort. 
 54
 55	Lolli	--> Schwangere frau ist am gebahren und bringt einen riesen Lolli zur Welt. Das Druecken war wegen des grossen Kopfes ungewöhnlich schwer. 
 56
@@ -162,23 +162,23 @@ zweistellig Major-Begriffe
 59
 60
 61
-62	Schein	--> Der Groupier fliegt zur Sonne um dort die Karten zu verbrennen die Die Bank verlieren lassen. Er kommt mit verbrannten Karten zurûck und kann keinen jackpot ausliefern. 
+62	Schein	--> Der Groupier händigt neuerdings nicht nur geldscheine aus sonder auch Scheine die die verlierer markiert. So bekommt jeder etwas. 
 63
 64
 65	Schule	--> Der Groupier meldet sich freiwillig um in der schule ein paar wurfel zu gebähren. (aus seinem Arsch ...). Alle Schüler sind hellauf begeistert. 
 66
 67
-68	Schaf
+68	Schaf 	--> Der Groupier schmeltzt die gewinner Würfel klebt diese auf ein Schaf dass die letzten hinweise auch mit sich nimmt. 
 69
 70
 71
 72	Kino	--> Bauarbeiter schwimmt im Fluss in die Nahe eines Kinos. Dort angekommen macht er halbnackt den Cocacola typen. 
-73
+73	Kamm	--> Der Bauarbeit nimmt seinen Hammer und Kamm und hämmert diesen in einen ziegelstein ein der nicht gelungen ist. Um ihn so wieder herauszuziehen. 
 74	Kur	--> Der Bauerbeit sizt in einem massage-Sessel mit Schlammmaske und Gurken auf den Augen. Und lasst sich die Kur geniesen. 
 75
-76
+76	
 77	Geige	--> Der Bauarbeiter in einem Hausbau muss eine tonnen-schwere riesen Geige hochziehen ins oberste Stockwerk. (mit einem Seilzug). Viele müssen ihm dabei behilflich sein. 
-78	Kaffee	
+78	Kaffee	--> Der Bauarbeiter neukömmling im kaafee machen. Röstet seinen Kaafee solange bis er nur noch kohle ist. Er kippt ihn anschliessend in die tasse erfolgreich geschmolzen ? 
 79	Kappe
 80
 81
@@ -193,12 +193,12 @@ zweistellig Major-Begriffe
 90
 91
 92
-93	Baum 
+93	Baum	--> Ein Mensch will eine weltreise starten mit seinem heissluftballon. Presse kommt an. Er started. Verfangt sich sofort in einem Baum und wird von einem Ast aufgespiesst. Die reise endet. 
 94
 95	Ball	--> Der luftballon gebähr einen Ball dem er das fliegen beigringen will es aber nicht schafft. Der ball stattdessen muss sich mit dem getreten werden abfinden. Was ein Scharm !!!!
 96
 97
-98
+98	Pfau	--> 
 99
 100
 
