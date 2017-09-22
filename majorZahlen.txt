@@ -94,15 +94,17 @@ einstellige Major-Begriffe
 
 
 zweistellig Major-Begriffe
-
-01	Sosse 
-02	Seide
+00	Soße
+01	Seide 
+02	Sahne
 03	Saum	--> Ein Bauer kann keine Freunde einladen .. Er hat ein Huhn das alle Gäste angreift und ihre Kópfe als trophäe aufspiesst und im Hof stehen lasst. 
 04	zar
 05	seil	--> Ein Huhn das am gebähren ist wird mit einem Seil kräftig nachgeholfen. Es ist ein ... Ei !
+05	seil	--> Ein Huhn seilt sich beim gebahren kofunter ab.
 06	Sushi 
 07	sack	--> Viele Hühner werden ausgebäutet und müssen schwere Sacke in den silo bringen. Alle in einer Reihe, wie sklaven. 
-08	sofa
+07	sack	--> Ein Huh geht auf eines Mannes Sack. mit den krallen bereitet sie viele schmerzen.  
+08	Seife
 09	suppe
 
 
@@ -110,8 +112,8 @@ zweistellig Major-Begriffe
 11	Tod
 12	Tonne 
 13 	dom 	--> Robin hood versucht sich mit einem dreizack und bekäft dabei einen DOM. Der dreizack zerbricht und Robin geht wieder zu seiner alten Waffe zurück. 
-14 	tor
-15	tal 
+14 	tor	--> Robin hood sitzt ein tor zur unterwelt auf. 
+15	tal 	--> Robin Hood hilft der schangeren frau die ins teletubbie TAL gelangen will. mit seinem Pfeil etc baut er eine seilbahn nach unten. 
 16	Tisch	--> Robin hood schiesst seinen Pfeil durch Würfel mit denen iligales Poker gespielt wird. 
 17	theke	--> eine Theke ist auf viele Weisen gefallen. Robin hood kommt hebt sie hoch, hervor springen die Kinder und jubeln ihm zu .
 18	taufe
@@ -119,9 +121,9 @@ zweistellig Major-Begriffe
 
 
 20	nase
-21	naht 
-22	nonne
-23	NEMO
+21	Niete 
+22	nonne	--> Eine Nonne spricht den Schwan an um im zum Kristentum zu konvertieren. Er beginnt die flucht ins wasser und schwimmt davon.  
+23	NEMO 	--> 
 24	narr
 25	Nil	
 26	niesche	--> Der Schwan ist noch nicht ueberlebensfähig. Er hat seinen Platz noch nicht in der natur gefunden. Er lasst das glück seine nische auswählen. Rauber ... Yuhuu !
@@ -130,82 +132,95 @@ zweistellig Major-Begriffe
 29	Anbau 	--> Der Schwan fliegt ueber seinen Bauernhof und kackt in die Lócher im flug um zu sähen. 
 
 
-30	
+30	Maus	
 31	Made	--> Der Teufel hat eine neue Folter maschine erbaut. Sie shiesst milionen von maden in die Münder der Menschen. 
 32	Mohn	--> Der Teufel schwimmt in einer Mohn-plantage. Als er von der Polizei erwischt wird,gibt er  positiv auf Opiate. Ab in den Knast ! 
 32	Mohn	--> Der Teufel verteilt im ghetto Schwimmbad geilen Mohn. Er liegt immer lassig im pool auf seiner matratze
 33	Mumie 	--> Der Teufel spiesst seine Ungehörige Mumie auf die auf einmal lieb zu den Menschen ist. 
 34	Meer	--> Der Teufel wird aus der Hölle verband und nimmt sein Trohnstuhl als boot um auf einer einsamen Insel unterschlupf zu suchen bis er wieder an der Reihe ist. 
-35
+35	Mühle
 36	Muschi	--> Der Teufel verspricht mit einem Glücksspiel, dass der gewinner Muschi bekommt. Ein Mann wurfelt eine 6, bekommt den Preis. Es regnet schleimige muschies herab. 
 37	Mücke	--> Der Teufel hebt eine gestorbenen Múcke auf und hebt sie in einer ringschachtel auf als andenken der ersten Malaria Müecke. 
 38	Möwe	--> Der Teufel zündet den Schabel einiger Möwen an aus Spass um die Mówen schmelzen zu sehen und diese Schmelze dann den Höllen insassen als trank zu geben. 
 38	Möwe	--> Der Teufel baut Möwen Gussformen damit er die Möwen wie hitchcoocks birds die Menscheit angreifen kann.
 39	Mop	--> Der Teufel fliegt wie eine Hexe auf seinem Mop und tröpfelt alle menschen mit seinem dreckwasser voll
-40
+
+40	Rose
 41	Ratte	--> Ein Stuhl erschreckt sich vor einer Ratte und rettet sich auf einen anderen stuhl. Von dort aus erschiesst er die Ratte mit 10 Schussen. 
-42
+42	Ruine
 43	Rum 	--> Ein Stuhl der zuviel getrunken hat spiesst seinen letzten Rum auf aus Wut darauf, dass er leer gegangen ist. 
-44
-45
-46	Rauch 
-47	Rock	--> ein perversling hat einen Stuhl fabriziert der die Röcke aller frauen anhebt und ihre teile blossstellt. 
-48
-49
+43	Rum 	--> Als scherz an einen alkohiliger stell sein kind die lezte RUM flasch unter einen stuhl. Beim draufsetzen zerbirst diese. 
+44	Rohr
+45	Rolle 	--> Der schangere stuhl ist so schanger,dass er nur noch mit einer Rolle von Raum zu Raum tranportiert werden muss. 
+46	Rauch	--> Indiana die probieren andere zu informieren machen Rauchzeichen indem sie ihren Kriegstuhl ausgraben und mit seinen fußbein drehen.  
+47	Rock	--> ein perversling hat einen Stuhl fabriziert mit beluftung. Frauen setzen sich und der rock wird hochgehoben. 
+48	Riff
+49	Raupe
+
 50	Lasso 	--> Schwangere Frau muss auf einer Ferie ein sich bewegendes Ei mit einem Lasso einfangen. (Gewinnt und isste es gleich Roh!)
 51	Latte	--> Schwangere Frau spielt gegen FC-Barcelona und bekommt leider nur einen lattenschuss hin. Alle Frauen sind entäuscht. 
-51	Latte	--> Schwangere Frau treibt ihr kind ab in dem sie sich in den bauch schiesst.
-52
+52	Leine
 53	Leim	--> Die Schwangere Frau spiest ihre fruchtblase auf und klebt das frisch erongene Kind als dekoration an die Wand. Macht sich gut dort. 
-54
+54	Leier
 55	Lolli	--> Schwangere frau ist am gebahren und bringt einen riesen Lolli zur Welt. Das Druecken war wegen des grossen Kopfes ungewöhnlich schwer. 
-56
+56	Elch
 57	Lok	--> Ein Mann wurde von einer Lok ueberrollt und eine Schwangere frau hebt die lok an wobei sie soviel Kraft aufwendet dass sie gebahrt und gleichzeitig den Mann rettet. 
 58	Löwe	
-59
-60
-61
+59	Lupe
+
+
+60	Schuss
+61	Schotte
 62	Schein	--> Der Groupier händigt neuerdings nicht nur geldscheine aus sonder auch Scheine die die verlierer markiert. So bekommt jeder etwas. 
-63
-64
+63	Schaum
+64	Schere
 65	Schule	--> Der Groupier meldet sich freiwillig um in der schule ein paar wurfel zu gebähren. (aus seinem Arsch ...). Alle Schüler sind hellauf begeistert. 
-66
-67
+66	Scheich
+67	Jacke
 68	Schaf 	--> Der Groupier schmeltzt die gewinner Würfel klebt diese auf ein Schaf dass die letzten hinweise auch mit sich nimmt. 
 68	Schaf 	--> Der Groupier setzt ein Schaaf auf den Spieltisch der alle würfel wegfrisst. Alle schmelzen dahin, das schaf ist einfach zu entzückend.
-69
-70
-71
+69	Scheibe	--> 
+
+70	Käse
+71	Akte
 72	Kino	--> Bauarbeiter schwimmt im Fluss in die Nahe eines Kinos. Dort angekommen macht er halbnackt den Cocacola typen. 
 73	Kamm	--> Der Bauarbeit nimmt seinen Hammer und Kamm und hämmert diesen in einen ziegelstein ein der nicht gelungen ist. Um ihn so wieder herauszuziehen. 
+#73	Kamm	--> Der Bauarbeit sticht sich durch den helm um sich zu kemmen.
 74	Kur	--> Der Bauerbeit sizt in einem massage-Sessel mit Schlammmaske und Gurken auf den Augen. Und lasst sich die Kur geniesen. 
-75
+75	Keule
 76	Koch	--> Der Bauarbeiter arbeitet mit seinem Helm als Koch. Als er anfängt mit dem Fleisch zu würfeln und es auch noch mit der Nietenpistole abschießt, wird er entlassen. 	
+76	Koch	--> Der Bauarbeiter bringt den riesen Suppenwúrfel zum Koch. Der seine suppe zubereitet.  
 77	Geige	--> Der Bauarbeiter in einem Hausbau muss eine tonnen-schwere riesen Geige hochziehen ins oberste Stockwerk. (mit einem Seilzug). Viele müssen ihm dabei behilflich sein. 
+77	Geige	--> Der Bauarbeiter spielt siene riesenGeige mit einem kran.  
 78	Kaffee	--> Der Bauarbeiter neukömmling im kaafee machen. Röstet seinen Kaafee solange bis er nur noch kohle ist. Er kippt ihn anschliessend in die tasse erfolgreich geschmolzen ? 
 78	Kaffee	--> Der Bauarbeiter benutzt sienen heißen kaafee um die metallplatten zusammenzuschweißen. 
 79	Kappe
-80
+
+
+80	Fass
 81	Fett	--> Der chirurgen schneemann saugt fett ab indem er seine Rübennase nimmt und diese in den Bauch des patienten jagt. 
 82	Fön	--> Der Schneeman will sich umbringen und schwimmt deswegen mit seinem Fön die Donau entlang. (Nichts passiert ...)
 83	WM	--> Der Schneeman spiesst heuhaufen in der Heuhaufen-aufspiez-WM teil. Der gewinner muss die meisten Heuhaufen aufgestochen haben. 
-84
-85
+84	Feuer
+85	Falle
 86	Fisch	--> Der Schneemann vergnügt sich mit seinem neuen fisch-würfeln. sie bestehen aus eiswürfeln und die fischaugen sind die "augen"-zaheln. XDD 
 87	Waage 	--> Der schneemann hebt einen Haufen Rüben auf einer Waage. So kann er das gewicht seiner nase schätzen.  
 88	Waffe	--> Der Schneemann merkt dass Es sommer wird und er schmiltzt. Er nimmt sich mit seiner Waffer (welche er unter seinem Kissen aufbewahrt) das leben. 
 89	Wabe	--> Ein Schneemann fliegt in seine Wabe hinein wo er seine schneeman-kinder aus dem hund mit wasser futtert. 
-90
-91
-92
+
+
+
+90	Bus
+91	Bett
+92	Bein	--> Der Ballon der abgestürzt ist muss sich ans Festland retten. nimmt ein Bein dass er rumliegen hat als Paddel und bewegt sich damit fort. 
 93	Baum	--> Ein Mensch will eine weltreise starten mit seinem heissluftballon. Presse kommt an. Er started. Verfangt sich sofort in einem Baum und wird von einem Ast aufgespiesst. Die reise endet. 
-94
+94	Bier
 95	Ball	--> Der luftballon gebähr einen Ball dem er das fliegen beigringen will es aber nicht schafft. Der ball stattdessen muss sich mit dem getreten werden abfinden. Was ein Scharm !!!!
-96
-97
+96	Buch
+97	Pauke
 98	Pfau	--> Der Luftballon hat ein schmelzloch von der stichflamme abbekommen. Die vielen Pfauen an bord koennen Federn entnommen werden um das loch zu flicken. 
-99
-100
+99	Baby
+
 
 
 
